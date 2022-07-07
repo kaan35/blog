@@ -50,16 +50,16 @@ This project based on 4 services
   mv blog-api/ api/
   cd api
   cp .env.sample .env
-  Update database config in .env file 
-  DATABASE_URL='mongodb://<host>:<port>/<database>'
+  # Update database config in .env file 
+  # DATABASE_URL='mongodb://<host>:<port>/<database>'
   npm i
   cd ..
   cd client
   cd src/environments/
   mv environment.dev.sample.ts environment.dev.ts
   mv environment.prod.sample.ts environment.prod.ts
-  Update api url in environment files
-  apiUrl: 'API_URL',
+  # Update api url in environment files
+  # apiUrl: 'API_URL',
   cd .. && cd ..
   npm i
   cd ..
@@ -77,22 +77,23 @@ This project based on 4 services
   git clone https://github.com/kaan35/blog-api.git
   git clone https://github.com/kaan35/blog-client.git
   cp .env.sample .env
+  # Change env=dev to env=prod in .env file
   mv blog-client/ client/
   mv blog-api/ api/
   cd api
   cp .env.sample .env
-  Update database config in .env file 
-  DATABASE_URL='mongodb://<host>:<port>/<database>'
+  # Update database config in .env file 
+  # DATABASE_URL='mongodb://<host>:<port>/<database>'
   npm install --omit=dev
   cd ..
   cd client
   cd src/environments/
   mv environment.dev.sample.ts environment.dev.ts
   mv environment.prod.sample.ts environment.prod.ts
-  Update api url in environment files
-  apiUrl: 'API_URL',
-  npm install --omit=dev
+  # Update api url in environment files
+  # apiUrl: 'API_URL',
   cd .. && cd ..
+  npm install --omit=dev
   npm run build:ssr
   cd ..
   docker compose up
