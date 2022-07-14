@@ -26,14 +26,19 @@ This project based on 4 services
     - You will need Node.js and npm installed on your computer to build and update dependencies.
     - macOS: [Node.js download page](https://nodejs.org/en/download/)
     - Windows: [Node.js download page](https://nodejs.org/en/download/)
-    - Arch Linux: `pacman -S nodejs npm`
+    - Arch Linux: `pacman -Sy nodejs npm`
 
 - Docker
     - You will need Docker Engine installed on your computer to build and run services.
     - macOS: [Docker Desktop for macOS download page](https://docs.docker.com/desktop/mac/install/)
     - Windows: [Docker Desktop for Windows download page](https://docs.docker.com/desktop/windows/install/)
       installers and binaries.
-    - Arch Linux: `pacman -S docker`
+    - Arch Linux:
+  ````
+  pacman -Sy docker docker-compose
+  systemctl start docker && sudo systemctl enable docker
+  usermod -aG docker $USER
+  ````
 
 ## Installation for development
 
