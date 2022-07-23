@@ -29,7 +29,20 @@ services:
     ports:
       - "80:4000"
     depends_on:
-      - db
+      - api
+    networks:
+      - blog
+  admin:
+    container_name: admin_container
+    build:
+      context: .
+      dockerfile: admin/Dockerfile-${env:-dev}
+    volumes:
+      - ./admin:/app/admin
+    ports:
+      - "82:4000"
+    depends_on:
+      - api
     networks:
       - blog
   db:
